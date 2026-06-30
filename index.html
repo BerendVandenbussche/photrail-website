@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#0b0e1f" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+
+    <!-- Primary meta -->
+    <title>Photrail — Your travel history, automatically.</title>
+    <meta
+      name="description"
+      content="Photrail turns the location data already inside your photos into a beautiful, private travel history — countries, cities, trips, world wonders and a Year in Travel recap. 100% on-device. No account. Open source."
+    />
+    <meta name="keywords" content="travel app, photo metadata, EXIF, travel map, countries visited, year in travel, privacy, on-device, iOS, open source" />
+    <meta name="author" content="Photrail" />
+    <link rel="canonical" href="https://photrail.app/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Photrail" />
+    <meta property="og:title" content="Photrail — Your travel history, automatically." />
+    <meta
+      property="og:description"
+      content="Turn the location data already inside your photos into a beautiful travel history. 100% on-device. No account. Open source."
+    />
+    <meta property="og:url" content="https://photrail.app/" />
+    <meta property="og:image" content="https://photrail.app/og-image.svg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Photrail — Your travel history, automatically." />
+    <meta
+      name="twitter:description"
+      content="Turn the location data already inside your photos into a beautiful travel history. 100% on-device. No account. Open source."
+    />
+    <meta name="twitter:image" content="https://photrail.app/og-image.svg" />
+
+    <!-- Avoid a flash of the wrong theme before Vue boots. -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('photrail-theme')
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+          var dark = stored ? stored === 'dark' : prefersDark
+          document.documentElement.classList.toggle('dark', dark)
+        } catch (e) {
+          /* default markup is dark-first */
+        }
+      })()
+    </script>
+
+    <!-- Structured data for rich results -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Photrail",
+        "operatingSystem": "iOS 18+",
+        "applicationCategory": "TravelApplication",
+        "description": "Photrail turns the location data already inside your photos into a beautiful, private travel history. 100% on-device, no account, open source.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "url": "https://photrail.app/"
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
