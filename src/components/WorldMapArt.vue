@@ -61,13 +61,6 @@ const landDots = [
         <stop offset="0" stop-color="#4f45e6" stop-opacity="0.18" />
         <stop offset="1" stop-color="#4f45e6" stop-opacity="0" />
       </radialGradient>
-      <filter id="pin-glow" x="-200%" y="-200%" width="500%" height="500%">
-        <feGaussianBlur stdDeviation="6" result="b" />
-        <feMerge>
-          <feMergeNode in="b" />
-          <feMergeNode in="SourceGraphic" />
-        </feMerge>
-      </filter>
     </defs>
 
     <rect width="1000" height="500" fill="url(#map-vignette)" />
@@ -88,9 +81,11 @@ const landDots = [
       <path v-for="(d, i) in routePaths" :key="`r${i}`" :d="d" />
     </g>
 
-    <!-- Pins -->
+    <!-- Pins. A static translucent halo replaces a per-pin SVG blur filter,
+         which is far cheaper to composite (especially on mobile Safari). -->
     <g>
-      <g v-for="(pin, i) in pins" :key="`p${i}`" :transform="`translate(${pin.x} ${pin.y})`" filter="url(#pin-glow)">
+      <g v-for="(pin, i) in pins" :key="`p${i}`" :transform="`translate(${pin.x} ${pin.y})`">
+        <circle :r="pin.big ? 18 : 13" class="fill-brand-500/20 dark:fill-brand-400/25" />
         <circle :r="pin.big ? 9 : 6" class="fill-brand-500 dark:fill-brand-400" />
         <circle :r="pin.big ? 4 : 2.6" fill="#fff" />
       </g>

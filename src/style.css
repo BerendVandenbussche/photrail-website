@@ -74,11 +74,11 @@
 
   /* ---- Glassmorphism surfaces ---- */
   .glass {
-    @apply border border-ink-900/10 bg-white/70 backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.04];
+    @apply border border-ink-900/10 bg-white/80 backdrop-blur-lg dark:border-white/10 dark:bg-white/[0.06];
   }
 
   .glass-strong {
-    @apply border border-ink-900/10 bg-white/80 backdrop-blur-2xl dark:border-white/[0.08] dark:bg-white/[0.06];
+    @apply border border-ink-900/10 bg-white/90 backdrop-blur-lg dark:border-white/[0.08] dark:bg-ink-900/80;
   }
 
   .card {
@@ -117,20 +117,33 @@
 }
 
 /* ---- Scroll-reveal directive ---- */
+/* No `will-change` here: many elements carry this class at once before they
+   reveal, and promoting each to its own compositor layer simultaneously causes
+   serious memory pressure / jank on mobile Safari. The transition is plenty. */
 .reveal-init {
   opacity: 0;
-  transform: translateY(28px);
-  will-change: opacity, transform;
+  transform: translateY(24px);
 }
 .reveal-in {
   opacity: 1;
   transform: none;
-  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
 @media (prefers-reduced-motion: reduce) {
   .reveal-init {
     opacity: 1;
     transform: none;
+  }
+}
+
+/* On phones, backdrop-filter repaints on every scroll frame (esp. behind the
+   sticky nav) and is a top cause of jank in mobile Safari. Every glass surface
+   uses an opaque-enough background, so we drop blur entirely on small screens —
+   the look holds up and scrolling stays smooth. */
+@media (max-width: 640px) {
+  * {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
   }
 }
 

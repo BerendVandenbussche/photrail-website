@@ -30,7 +30,7 @@ const personality = [
         <div class="h-40 w-full text-brand-300">
           <WorldMapArt />
         </div>
-        <div class="absolute bottom-3 left-3 rounded-full bg-black/40 px-3 py-1 text-[10px] font-semibold backdrop-blur">
+        <div class="absolute bottom-3 left-3 rounded-full bg-black/55 px-3 py-1 text-[10px] font-semibold">
           32 countries · 6 continents
         </div>
       </div>

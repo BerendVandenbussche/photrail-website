@@ -15,7 +15,7 @@ withDefaults(defineProps<{ width?: number; glow?: boolean; island?: boolean }>()
   >
     <div
       v-if="glow"
-      class="pointer-events-none absolute -inset-10 -z-10 rounded-[40%] bg-brand-500/30 blur-3xl dark:bg-brand-500/40"
+      class="pointer-events-none absolute -inset-8 -z-10 rounded-[40%] bg-brand-500/25 blur-2xl dark:bg-brand-500/35"
       aria-hidden="true"
     />
     <div

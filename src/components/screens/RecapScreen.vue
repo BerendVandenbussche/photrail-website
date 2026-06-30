@@ -26,19 +26,19 @@ import ScreenChrome from './ScreenChrome.vue'
         </div>
 
         <div class="mt-auto grid grid-cols-2 gap-3">
-          <div class="rounded-2xl bg-white/10 p-3 backdrop-blur">
+          <div class="rounded-2xl bg-white/15 p-3">
             <p class="font-rounded text-2xl font-extrabold">12</p>
             <p class="text-[10px] text-white/60">trips</p>
           </div>
-          <div class="rounded-2xl bg-white/10 p-3 backdrop-blur">
+          <div class="rounded-2xl bg-white/15 p-3">
             <p class="font-rounded text-2xl font-extrabold">9</p>
             <p class="text-[10px] text-white/60">countries</p>
           </div>
-          <div class="rounded-2xl bg-white/10 p-3 backdrop-blur">
+          <div class="rounded-2xl bg-white/15 p-3">
             <p class="font-rounded text-2xl font-extrabold">🇯🇵</p>
             <p class="text-[10px] text-white/60">most photographed</p>
           </div>
-          <div class="rounded-2xl bg-white/10 p-3 backdrop-blur">
+          <div class="rounded-2xl bg-white/15 p-3">
             <p class="font-rounded text-2xl font-extrabold">4</p>
             <p class="text-[10px] text-white/60">new countries</p>
           </div>

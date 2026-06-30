@@ -1,0 +1,14 @@
+{
+  "name": "Photrail",
+  "short_name": "Photrail",
+  "description": "Your travel history, automatically. Turn the location data inside your photos into a beautiful, private travel history.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b0e1f",
+  "theme_color": "#0b0e1f",
+  "icons": [
+    { "src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any" },
+    { "src": "/icon-192.png", "type": "image/png", "sizes": "192x192", "purpose": "any maskable" },
+    { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512", "purpose": "any maskable" }
+  ]
+}

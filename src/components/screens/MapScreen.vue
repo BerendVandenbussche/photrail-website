@@ -9,13 +9,13 @@ import WorldMapArt from '@/components/WorldMapArt.vue'
       <WorldMapArt />
       <!-- top search-ish bar -->
       <div class="absolute inset-x-4 top-3">
-        <div class="flex items-center gap-2 rounded-2xl border border-white/10 bg-black/30 px-3 py-2 text-white backdrop-blur-xl">
+        <div class="flex items-center gap-2 rounded-2xl border border-white/10 bg-black/50 px-3 py-2 text-white">
           <span class="text-sm">🔎</span>
           <span class="text-[11px] text-white/50">Search countries & trips</span>
         </div>
       </div>
       <!-- bottom sheet -->
-      <div class="absolute inset-x-3 bottom-3 rounded-3xl border border-white/10 bg-black/40 p-4 text-white backdrop-blur-xl">
+      <div class="absolute inset-x-3 bottom-3 rounded-3xl border border-white/10 bg-black/60 p-4 text-white">
         <div class="mx-auto mb-3 h-1 w-10 rounded-full bg-white/30" />
         <div class="flex items-center justify-between">
           <div>
