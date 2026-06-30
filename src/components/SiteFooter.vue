@@ -42,7 +42,7 @@ const year = new Date().getFullYear()
           <ul class="mt-4 space-y-2.5">
             <li><a :href="APP_STORE_URL" target="_blank" rel="noopener" class="text-sm text-ink-900/70 transition-colors hover:text-ink-900 dark:text-white/70 dark:hover:text-white">Download on the App Store</a></li>
             <li><a :href="GITHUB_URL" target="_blank" rel="noopener" class="text-sm text-ink-900/70 transition-colors hover:text-ink-900 dark:text-white/70 dark:hover:text-white">Source on GitHub</a></li>
-            <li><a :href="`${GITHUB_URL}/blob/main/LICENSE`" target="_blank" rel="noopener" class="text-sm text-ink-900/70 transition-colors hover:text-ink-900 dark:text-white/70 dark:hover:text-white">MIT License</a></li>
+            <li><a :href="`${GITHUB_URL}/blob/main/LICENSE`" target="_blank" rel="noopener" class="text-sm text-ink-900/70 transition-colors hover:text-ink-900 dark:text-white/70 dark:hover:text-white">GPLv3 License</a></li>
           </ul>
         </div>
       </div>
@@ -63,7 +63,7 @@ const year = new Date().getFullYear()
 
       <div class="mt-8 flex flex-col items-center justify-between gap-3 border-t border-ink-900/10 pt-6 text-center text-xs text-muted dark:border-white/10 sm:flex-row sm:text-left">
         <p>© {{ year }} Photrail. All rights reserved.</p>
-        <p>Open source under the MIT License · Made for travelers, not advertisers.</p>
+        <p>Open source under the GPLv3 License · Made for travelers, not advertisers.</p>
       </div>
     </div>
   </footer>

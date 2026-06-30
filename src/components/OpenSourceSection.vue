@@ -9,7 +9,7 @@ const points = [
   'Read every line that runs on your device',
   'Audit the privacy claims yourself',
   'Open issues, suggest features, send pull requests',
-  'MIT licensed — fork it, learn from it, build on it',
+  'GPLv3 licensed — free and copyleft, yours to study and build on',
 ]
 </script>
 
@@ -57,7 +57,7 @@ const points = [
               </div>
               <div class="min-w-0">
                 <p class="truncate font-mono text-sm font-semibold">BerendVandenbussche/Photrail</p>
-                <p class="text-xs text-muted">Public · MIT License · Swift</p>
+                <p class="text-xs text-muted">Public · GPLv3 · Swift</p>
               </div>
             </div>
 

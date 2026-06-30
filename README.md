@@ -103,4 +103,4 @@ Vercel, Cloudflare Pages, GitHub Pages, or any static host/CDN.
 
 ## License
 
-MIT — same as the Photrail app.
+GPLv3 — same as the Photrail app.
