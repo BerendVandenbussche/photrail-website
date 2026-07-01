@@ -62,7 +62,7 @@ const trustPoints = ['100% on-device', 'No account', 'No cloud', 'Open source']
                 <AppScreen screen="recap" />
               </PhoneMockup>
             </div>
-            <div class="relative animate-float">
+            <div class="relative sm:animate-float">
               <PhoneMockup :width="288">
                 <AppScreen screen="dashboard" />
               </PhoneMockup>

@@ -9,10 +9,10 @@ withDefaults(defineProps<{ grid?: boolean }>(), { grid: true })
 <template>
   <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
     <div
-      class="absolute -left-1/4 -top-1/3 h-[55vh] w-[55vh] rounded-full bg-brand-500/25 blur-[90px] dark:bg-brand-500/35"
+      class="absolute -left-1/4 -top-1/3 h-[55vh] w-[55vh] rounded-full bg-brand-500/15 dark:bg-brand-500/20 sm:bg-brand-500/25 sm:blur-[90px] sm:dark:bg-brand-500/35"
     />
     <div
-      class="absolute -right-1/4 top-0 h-[50vh] w-[50vh] rounded-full bg-violet2-500/20 blur-[90px] dark:bg-violet2-500/25"
+      class="absolute -right-1/4 top-0 h-[50vh] w-[50vh] rounded-full bg-violet2-500/10 dark:bg-violet2-500/15 sm:bg-violet2-500/20 sm:blur-[90px] sm:dark:bg-violet2-500/25"
     />
     <div
       v-if="grid"
