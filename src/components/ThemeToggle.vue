@@ -13,7 +13,7 @@ const { isDark, toggle } = useTheme()
     :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
     :aria-pressed="isDark"
   >
-    <Transition name="theme-swap" mode="out-in">
+    <Transition name="theme-swap">
       <AppIcon v-if="isDark" key="moon" name="moon" :size="18" />
       <AppIcon v-else key="sun" name="sun" :size="18" />
     </Transition>
@@ -23,7 +23,7 @@ const { isDark, toggle } = useTheme()
 <style scoped>
 .theme-swap-enter-active,
 .theme-swap-leave-active {
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition: opacity 0.15s ease, transform 0.15s ease;
 }
 .theme-swap-enter-from {
   opacity: 0;

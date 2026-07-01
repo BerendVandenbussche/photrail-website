@@ -24,12 +24,12 @@ function close() {
 
 <template>
   <header
-    class="fixed inset-x-0 top-0 z-50 transition-all duration-300"
+    class="fixed inset-x-0 top-0 z-50 transition-[padding] duration-300"
     :class="scrolled ? 'py-2' : 'py-3.5'"
   >
     <div class="container-page">
       <nav
-        class="flex items-center justify-between rounded-full px-4 py-2.5 transition-all duration-300"
+        class="flex items-center justify-between rounded-full px-4 py-2.5 transition-[background-color,box-shadow,border-color] duration-300"
         :class="scrolled ? 'glass-strong shadow-card' : ''"
         aria-label="Primary"
       >
