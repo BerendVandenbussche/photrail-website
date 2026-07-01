@@ -1,12 +1,10 @@
-import { defineAsyncComponent, type Component } from 'vue'
+import type { Component } from 'vue'
 import DashboardScreen from '@/components/screens/DashboardScreen.vue'
-
-// ponytail: async — screenshots exist for these; SVG fallbacks only needed on image error
-const PersonalityScreen = defineAsyncComponent(() => import('@/components/screens/PersonalityScreen.vue'))
-const RecapScreen = defineAsyncComponent(() => import('@/components/screens/RecapScreen.vue'))
-const MapScreen = defineAsyncComponent(() => import('@/components/screens/MapScreen.vue'))
-const CountryScreen = defineAsyncComponent(() => import('@/components/screens/CountryScreen.vue'))
-const ShareCardScreen = defineAsyncComponent(() => import('@/components/screens/ShareCardScreen.vue'))
+import PersonalityScreen from '@/components/screens/PersonalityScreen.vue'
+import RecapScreen from '@/components/screens/RecapScreen.vue'
+import MapScreen from '@/components/screens/MapScreen.vue'
+import CountryScreen from '@/components/screens/CountryScreen.vue'
+import ShareCardScreen from '@/components/screens/ShareCardScreen.vue'
 
 /**
  * The phone screens shown across the site.
