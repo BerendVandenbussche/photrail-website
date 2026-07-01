@@ -20,7 +20,7 @@ const points = [
         <!-- ambient accent -->
         <div class="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-brand-500/15 blur-3xl" aria-hidden="true" />
 
-        <div class="relative grid items-center gap-10 lg:grid-cols-2">
+        <div class="relative grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
           <div>
             <span class="pill"><AppIcon name="github" :size="14" /> Open source</span>
             <h2 class="display mt-4 text-balance text-3xl sm:text-4xl lg:text-5xl">
