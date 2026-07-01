@@ -1,20 +1,21 @@
 <script setup lang="ts">
+import { defineAsyncComponent } from 'vue'
 import { useTheme } from '@/composables/useTheme'
 import NavBar from '@/components/NavBar.vue'
 import HeroSection from '@/components/HeroSection.vue'
-import TrustSection from '@/components/TrustSection.vue'
-import FeatureGrid from '@/components/FeatureGrid.vue'
-import HowItWorks from '@/components/HowItWorks.vue'
-import PrivacySection from '@/components/PrivacySection.vue'
-import ExifEducation from '@/components/ExifEducation.vue'
-import ExifDemo from '@/components/ExifDemo.vue'
-import YearInTravelSection from '@/components/YearInTravelSection.vue'
-import ScreenshotCarousel from '@/components/ScreenshotCarousel.vue'
-import OpenSourceSection from '@/components/OpenSourceSection.vue'
-import AppStoreCTA from '@/components/AppStoreCTA.vue'
-import SiteFooter from '@/components/SiteFooter.vue'
 
-// Initialise the theme controller once at the root.
+const TrustSection = defineAsyncComponent(() => import('@/components/TrustSection.vue'))
+const FeatureGrid = defineAsyncComponent(() => import('@/components/FeatureGrid.vue'))
+const HowItWorks = defineAsyncComponent(() => import('@/components/HowItWorks.vue'))
+const PrivacySection = defineAsyncComponent(() => import('@/components/PrivacySection.vue'))
+const ExifEducation = defineAsyncComponent(() => import('@/components/ExifEducation.vue'))
+const ExifDemo = defineAsyncComponent(() => import('@/components/ExifDemo.vue'))
+const YearInTravelSection = defineAsyncComponent(() => import('@/components/YearInTravelSection.vue'))
+const ScreenshotCarousel = defineAsyncComponent(() => import('@/components/ScreenshotCarousel.vue'))
+const OpenSourceSection = defineAsyncComponent(() => import('@/components/OpenSourceSection.vue'))
+const AppStoreCTA = defineAsyncComponent(() => import('@/components/AppStoreCTA.vue'))
+const SiteFooter = defineAsyncComponent(() => import('@/components/SiteFooter.vue'))
+
 useTheme()
 </script>
 
