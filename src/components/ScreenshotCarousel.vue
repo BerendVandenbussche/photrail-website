@@ -14,7 +14,9 @@ function scrollToIndex(i: number) {
   const el = track.value
   if (!el) return
   const card = el.children[i] as HTMLElement | undefined
-  if (card) el.scrollTo({ left: card.offsetLeft - el.offsetLeft, behavior: 'smooth' })
+  if (!card) return
+  const diff = card.getBoundingClientRect().left - el.getBoundingClientRect().left
+  el.scrollBy({ left: diff - (el.clientWidth - card.clientWidth) / 2, behavior: 'smooth' })
 }
 function step(dir: number) {
   scrollToIndex(Math.min(slides.length - 1, Math.max(0, active.value + dir)))
