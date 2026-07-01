@@ -78,42 +78,32 @@ function close() {
       </nav>
 
       <!-- Mobile dropdown -->
-      <Transition name="menu">
-        <div v-if="menuOpen" class="mt-2 lg:hidden">
-          <div class="glass-strong rounded-3xl p-2 shadow-card">
-            <a
-              v-for="link in NAV_LINKS"
-              :key="link.href"
-              :href="link.href"
-              class="block rounded-2xl px-4 py-3 text-sm font-medium text-ink-900/80 transition-colors hover:bg-ink-900/5 dark:text-white/80 dark:hover:bg-white/5"
-              @click="close"
-            >
-              {{ link.label }}
-            </a>
-            <a
-              :href="APP_STORE_URL"
-              target="_blank"
-              rel="noopener"
-              class="btn btn-primary mt-1 w-full"
-              @click="close"
-            >
-              Download on the App Store
-            </a>
-          </div>
+      <div
+        class="mt-2 origin-top transition-[opacity,transform] duration-200 ease-out lg:hidden"
+        :class="menuOpen ? 'opacity-100 scale-y-100' : 'pointer-events-none opacity-0 scale-y-95'"
+      >
+        <div class="glass-strong rounded-3xl p-2 shadow-card">
+          <a
+            v-for="link in NAV_LINKS"
+            :key="link.href"
+            :href="link.href"
+            class="block rounded-2xl px-4 py-3 text-sm font-medium text-ink-900/80 transition-colors hover:bg-ink-900/5 dark:text-white/80 dark:hover:bg-white/5"
+            @click="close"
+          >
+            {{ link.label }}
+          </a>
+          <a
+            :href="APP_STORE_URL"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-primary mt-1 w-full"
+            @click="close"
+          >
+            Download on the App Store
+          </a>
         </div>
-      </Transition>
+      </div>
     </div>
   </header>
 </template>
 
-<style scoped>
-.menu-enter-active,
-.menu-leave-active {
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-.menu-enter-from,
-.menu-leave-to {
-  opacity: 0;
-  transform: translateY(-8px);
-}
-</style>
