@@ -20,9 +20,17 @@
     />
     <meta name="keywords" content="travel app, photo metadata, EXIF, travel map, countries visited, year in travel, privacy, on-device, iOS, open source" />
     <meta name="author" content="Photrail" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href="https://photrail.app/" />
 
-    <!-- Open Graph -->
+    <!-- iOS / PWA -->
+    <meta name="application-name" content="Photrail" />
+    <meta name="apple-mobile-web-app-title" content="Photrail" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Open Graph (Facebook, LinkedIn, Slack, iMessage, WhatsApp…) -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Photrail" />
     <meta property="og:title" content="Photrail — Your travel history, automatically." />
@@ -31,16 +39,24 @@
       content="Turn the location data already inside your photos into a beautiful travel history. 100% on-device. No account. Open source."
     />
     <meta property="og:url" content="https://photrail.app/" />
-    <meta property="og:image" content="https://photrail.app/og-image.svg" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="nl_NL" />
+    <!-- PNG (not SVG) so every platform renders the preview image. -->
+    <meta property="og:image" content="https://photrail.app/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Photrail — your travel history, automatically. 100% on-device, no account, open source." />
 
-    <!-- Twitter -->
+    <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Photrail — Your travel history, automatically." />
     <meta
       name="twitter:description"
       content="Turn the location data already inside your photos into a beautiful travel history. 100% on-device. No account. Open source."
     />
-    <meta name="twitter:image" content="https://photrail.app/og-image.svg" />
+    <meta name="twitter:image" content="https://photrail.app/og-image.png" />
+    <meta name="twitter:image:alt" content="Photrail — your travel history, automatically." />
 
     <!-- Avoid a flash of the wrong theme before Vue boots. -->
     <script>

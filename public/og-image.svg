@@ -24,17 +24,19 @@
   <!-- faint dotted travel trail -->
   <path d="M120 470 C 360 300, 520 520, 760 300 S 1080 200, 1120 150" fill="none" stroke="#7d7bf5" stroke-opacity="0.35" stroke-width="3" stroke-dasharray="2 14" stroke-linecap="round" />
 
-  <g transform="translate(96 232)">
-    <rect width="116" height="116" rx="30" fill="url(#tile)" />
-    <g transform="translate(26 26) scale(0.64)">
+  <g transform="translate(96 150)">
+    <rect width="112" height="112" rx="29" fill="url(#tile)" />
+    <g transform="translate(25 25) scale(0.62)">
       <path d="M22 80 C 30 30, 70 72, 78 24" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round" />
       <circle cx="22" cy="80" r="5" fill="#ffffff" />
       <circle cx="78" cy="24" r="9.5" fill="#ffffff" />
     </g>
   </g>
 
-  <text x="240" y="324" font-family="SF Pro Rounded, -apple-system, Segoe UI, Roboto, sans-serif" font-size="76" font-weight="800" fill="#ffffff">Photrail</text>
+  <text x="232" y="238" font-family="SF Pro Rounded, -apple-system, Segoe UI, Roboto, sans-serif" font-size="72" font-weight="800" fill="#ffffff">Photrail</text>
 
-  <text x="98" y="430" font-family="SF Pro Display, -apple-system, Segoe UI, Roboto, sans-serif" font-size="58" font-weight="800" fill="#ffffff" letter-spacing="-1">Your travel history, automatically.</text>
-  <text x="98" y="494" font-family="-apple-system, Segoe UI, Roboto, sans-serif" font-size="30" fill="#b9bce0">100% on-device · No account · Open source</text>
+  <!-- Two-line headline keeps well clear of the 1200px edge -->
+  <text x="98" y="392" font-family="SF Pro Display, -apple-system, Segoe UI, Roboto, sans-serif" font-size="62" font-weight="800" fill="#ffffff" letter-spacing="-1.5">Your travel history,</text>
+  <text x="98" y="464" font-family="SF Pro Display, -apple-system, Segoe UI, Roboto, sans-serif" font-size="62" font-weight="800" fill="url(#accent)" letter-spacing="-1.5">automatically.</text>
+  <text x="98" y="532" font-family="-apple-system, Segoe UI, Roboto, sans-serif" font-size="30" fill="#b9bce0">100% on-device · No account · Open source</text>
 </svg>
