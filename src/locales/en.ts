@@ -12,6 +12,7 @@ export default {
     privacy: 'Privacy',
     demo: 'Try the demo',
     openSource: 'Open source',
+    contribute: 'Contribute',
     getApp: 'Get the app',
     home: 'Photrail home',
     viewGithub: 'View Photrail on GitHub',
@@ -316,6 +317,38 @@ export default {
     starUs: 'Star us!',
     onDevice: 'On-device',
     builtWith: 'Built with',
+  },
+
+  contribute: {
+    eyebrow: 'Open to everyone',
+    heading: 'Help bring Photrail to your language.',
+    intro:
+      'Photrail is open source and community-powered. It already speaks English and Dutch — and with your help, it can speak yours. Every word in the app is a community translation away.',
+    availableNow: 'Available now',
+    yourLanguageNext: 'Your language next?',
+    steps: {
+      find: {
+        title: 'Find the text',
+        desc: 'Every word in Photrail lives in a single String Catalog on GitHub — nothing scattered to hunt down.',
+      },
+      translate: {
+        title: 'Translate it',
+        desc: 'Add your language right in Xcode’s catalog editor, or from an exported file. You only ever change text, never code.',
+      },
+      pr: {
+        title: 'Open a pull request',
+        desc: 'Send your translation back on GitHub. We review it, merge it, and you’re credited as a contributor.',
+      },
+    },
+    startTranslating: 'Start translating',
+    browseStrings: 'Browse the text',
+    otherTitle: 'Not a translator? More ways to help',
+    other: {
+      bugs: { title: 'Report a bug', desc: 'Something feel off? Open an issue and we’ll take a look.' },
+      ideas: { title: 'Suggest a feature', desc: 'Have an idea that would make Photrail better? We’d love to hear it.' },
+      code: { title: 'Contribute code', desc: 'Pick up an issue, improve the app, and send a pull request.' },
+      star: { title: 'Star the project', desc: 'The simplest boost — a star helps others discover Photrail.' },
+    },
   },
 
   cta: {

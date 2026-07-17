@@ -12,6 +12,7 @@ export default {
     privacy: 'Privacy',
     demo: 'Probeer de demo',
     openSource: 'Open source',
+    contribute: 'Bijdragen',
     getApp: 'Download de app',
     home: 'Photrail startpagina',
     viewGithub: 'Bekijk Photrail op GitHub',
@@ -316,6 +317,38 @@ export default {
     starUs: 'Geef ons een ster!',
     onDevice: 'Op je toestel',
     builtWith: 'Gebouwd met',
+  },
+
+  contribute: {
+    eyebrow: 'Open voor iedereen',
+    heading: 'Help Photrail in jouw taal te brengen.',
+    intro:
+      'Photrail is open source en draait op de community. De app spreekt al Engels en Nederlands — en met jouw hulp ook jouw taal. Elk woord in de app is één community-vertaling ver weg.',
+    availableNow: 'Nu beschikbaar',
+    yourLanguageNext: 'Jouw taal als volgende?',
+    steps: {
+      find: {
+        title: 'Vind de tekst',
+        desc: 'Alle tekst in Photrail staat in één String Catalog op GitHub — niets verspreid om te moeten zoeken.',
+      },
+      translate: {
+        title: 'Vertaal ze',
+        desc: 'Voeg je taal toe in de catalogus-editor van Xcode of via een geëxporteerd bestand. Je wijzigt alleen tekst, nooit code.',
+      },
+      pr: {
+        title: 'Open een pull request',
+        desc: 'Stuur je vertaling terug op GitHub. Wij bekijken ze, voegen ze samen en je krijgt vermelding als bijdrager.',
+      },
+    },
+    startTranslating: 'Begin met vertalen',
+    browseStrings: 'Bekijk de tekst',
+    otherTitle: 'Geen vertaler? Meer manieren om te helpen',
+    other: {
+      bugs: { title: 'Meld een bug', desc: 'Iets niet in orde? Open een issue en we kijken ernaar.' },
+      ideas: { title: 'Stel een functie voor', desc: 'Een idee dat Photrail beter maakt? We horen het graag.' },
+      code: { title: 'Draag code bij', desc: 'Pak een issue op, verbeter de app en stuur een pull request.' },
+      star: { title: 'Geef een ster', desc: 'De eenvoudigste boost — een ster helpt anderen Photrail te ontdekken.' },
+    },
   },
 
   cta: {

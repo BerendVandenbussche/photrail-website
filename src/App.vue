@@ -11,6 +11,7 @@ import ExifDemo from '@/components/ExifDemo.vue'
 import YearInTravelSection from '@/components/YearInTravelSection.vue'
 import ScreenshotCarousel from '@/components/ScreenshotCarousel.vue'
 import OpenSourceSection from '@/components/OpenSourceSection.vue'
+import ContributeSection from '@/components/ContributeSection.vue'
 import AppStoreCTA from '@/components/AppStoreCTA.vue'
 import SiteFooter from '@/components/SiteFooter.vue'
 import { onMounted, watch } from 'vue'
@@ -56,6 +57,7 @@ watch(locale, syncDocument)
     <YearInTravelSection />
     <ScreenshotCarousel />
     <OpenSourceSection />
+    <ContributeSection />
     <AppStoreCTA />
   </main>
 

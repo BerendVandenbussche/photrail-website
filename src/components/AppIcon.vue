@@ -33,6 +33,9 @@ export type IconName =
   | 'image'
   | 'chevron-left'
   | 'chevron-right'
+  | 'translate'
+  | 'bug'
+  | 'code'
 
 // `fill` icons (brand glyphs) vs default stroke icons.
 export const FILLED: IconName[] = ['github', 'apple', 'star']
@@ -85,6 +88,11 @@ export const PATHS: Record<IconName, string> = {
     'M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zM8.5 11a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM21 16l-5-5L5 21',
   'chevron-left': 'M15 6l-6 6 6 6',
   'chevron-right': 'M9 6l6 6-6 6',
+  translate:
+    'M4 6h7M7.5 4.5v1.5M9 6c0 3.6-2.4 6.6-6 8.2M5 10.3c0 1.7 2.4 3.2 5 3.2M12.5 20l4-9 4 9M14 16.7h5',
+  bug:
+    'M9 6a3 3 0 0 1 6 0M6 12h12M12 9v11M6 12v2a6 6 0 0 0 12 0v-2M5 8.5l2.2 1.6M19 8.5l-2.2 1.6M4.3 17.4l2.5-1.4M19.7 17.4l-2.5-1.4M4 12.5h2M18 12.5h2',
+  code: 'M8 7l-5 5 5 5M16 7l5 5-5 5M13.5 4l-3 16',
 }
 </script>
 
