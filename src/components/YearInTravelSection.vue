@@ -2,12 +2,14 @@
 import PhoneMockup from '@/components/PhoneMockup.vue'
 import AppScreen from '@/components/AppScreen.vue'
 import AppIcon, { type IconName } from '@/components/AppIcon.vue'
+import { useI18n } from 'vue-i18n'
 
-const highlights: Array<{ icon: IconName; title: string; desc: string }> = [
-  { icon: 'route', title: 'Your year as a story', desc: 'A paged, Wrapped-style recap you swipe through — distance traveled with relatable comparisons, your route mapped chronologically, and a hero finale.' },
-  { icon: 'flag', title: 'Biggest trips & firsts', desc: 'Your standout journey, the countries you set foot in for the very first time, your highest peak and furthest point from home.' },
-  { icon: 'sparkles', title: 'Personality evolution', desc: 'See how your travel style shifted over the year — and which destinations defined it.' },
-  { icon: 'share', title: 'Every slide is shareable', desc: 'Export any slide as its own branded card; the finale even comes in light, dark and transparent themes.' },
+const { t } = useI18n()
+const highlights: Array<{ icon: IconName; key: string }> = [
+  { icon: 'route', key: 'story' },
+  { icon: 'flag', key: 'firsts' },
+  { icon: 'sparkles', key: 'evolution' },
+  { icon: 'share', key: 'shareable' },
 ]
 </script>
 
@@ -21,23 +23,22 @@ const highlights: Array<{ icon: IconName; title: string; desc: string }> = [
     <div class="container-page">
       <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <div class="order-2 text-white lg:order-1">
-          <p v-reveal class="eyebrow !text-brand-300">Year in Travel</p>
+          <p v-reveal class="eyebrow !text-brand-300">{{ t('year.eyebrow') }}</p>
           <h2 v-reveal="80" class="display mt-3 text-balance text-3xl text-white sm:text-4xl lg:text-5xl">
-            Your year, replayed like a highlight reel.
+            {{ t('year.heading') }}
           </h2>
           <p v-reveal="140" class="mt-4 text-balance text-lg text-white/70">
-            Once a year, Photrail turns your travels into a cinematic recap worth waiting for —
-            personal, beautiful, and made entirely from photos you already took.
+            {{ t('year.intro') }}
           </p>
 
           <div class="mt-8 space-y-5">
-            <div v-for="(h, i) in highlights" :key="h.title" v-reveal="i * 80" class="flex gap-4">
+            <div v-for="(h, i) in highlights" :key="h.key" v-reveal="i * 80" class="flex gap-4">
               <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-white/10 text-white backdrop-blur">
                 <AppIcon :name="h.icon" :size="20" />
               </div>
               <div>
-                <h3 class="font-rounded font-bold text-white">{{ h.title }}</h3>
-                <p class="mt-1 text-sm text-white/65">{{ h.desc }}</p>
+                <h3 class="font-rounded font-bold text-white">{{ t(`year.highlights.${h.key}.title`) }}</h3>
+                <p class="mt-1 text-sm text-white/65">{{ t(`year.highlights.${h.key}.desc`) }}</p>
               </div>
             </div>
           </div>

@@ -16,8 +16,25 @@ dark-first** design language that mirrors the app.
 - **Tailwind CSS** 3 (custom Photrail palette derived from the app)
 - **exifr** — client-side EXIF parsing (the interactive demo)
 - **Leaflet** + CARTO tiles — Apple-Maps-style map (no API key, no backend)
+- **vue-i18n** — English 🇬🇧 + Dutch 🇳🇱, with a language picker
 
 No backend. No tracking. Everything runs in the browser.
+
+## Internationalisation (i18n)
+
+The site is fully localised in **English** and **Dutch** via `vue-i18n`.
+
+- All copy lives in [`src/locales/en.ts`](src/locales/en.ts) and
+  [`src/locales/nl.ts`](src/locales/nl.ts) — components hold no hard-coded text.
+- The language auto-detects from the browser (`navigator.language`), falls back
+  to English, and remembers the visitor's explicit choice in `localStorage`.
+- A **language picker** sits in the nav ([`LanguagePicker.vue`](src/components/LanguagePicker.vue)).
+- Switching language also updates `<html lang>`, the document `<title>` and the
+  meta description (see [`useLocale.ts`](src/composables/useLocale.ts)) for SEO.
+
+**To add a language:** copy `en.ts` to e.g. `fr.ts`, translate the values, then
+register it in [`src/i18n/index.ts`](src/i18n/index.ts) (`SUPPORTED_LOCALES` +
+`messages`) and add its label in `useLocale.ts`.
 
 ## Getting started
 

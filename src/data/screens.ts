@@ -30,49 +30,18 @@ export interface ScreenEntry {
   image: string | null
   /** SVG mockup shown until a real screenshot exists at `image`. */
   fallback: Component
-  title: string
-  desc: string
 }
 
 export type ScreenKey = 'dashboard' | 'personality' | 'recap' | 'map' | 'country' | 'share'
 
+// Titles/descriptions live in i18n under `screens.<key>.title` / `.desc`.
 export const SCREENS: Record<ScreenKey, ScreenEntry> = {
-  dashboard: {
-    image: '/screenshots/dashboard.png',
-    fallback: DashboardScreen,
-    title: 'Dashboard',
-    desc: 'Your travel at a glance',
-  },
-  personality: {
-    image: '/screenshots/personality.png',
-    fallback: PersonalityScreen,
-    title: 'Travel Personality',
-    desc: 'Discover your style',
-  },
-  recap: {
-    image: '/screenshots/recap.png',
-    fallback: RecapScreen,
-    title: 'Year in Travel',
-    desc: 'Your year, replayed',
-  },
-  map: {
-    image: '/screenshots/map.png',
-    fallback: MapScreen,
-    title: 'Travel Map',
-    desc: 'Every country, lit up',
-  },
-  country: {
-    image: '/screenshots/country.png',
-    fallback: CountryScreen,
-    title: 'Country detail',
-    desc: 'Trips, cities & photos',
-  },
-  share: {
-    image: '/screenshots/share.png',
-    fallback: ShareCardScreen,
-    title: 'Share cards',
-    desc: 'Ready for your story',
-  },
+  dashboard: { image: '/screenshots/dashboard.png', fallback: DashboardScreen },
+  personality: { image: '/screenshots/personality.png', fallback: PersonalityScreen },
+  recap: { image: '/screenshots/recap.png', fallback: RecapScreen },
+  map: { image: '/screenshots/map.png', fallback: MapScreen },
+  country: { image: '/screenshots/country.png', fallback: CountryScreen },
+  share: { image: '/screenshots/share.png', fallback: ShareCardScreen },
 }
 
 /** Order used by the screenshots carousel. */

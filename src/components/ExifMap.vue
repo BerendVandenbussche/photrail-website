@@ -2,10 +2,12 @@
 import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import 'leaflet/dist/leaflet.css'
 import type { Map as LeafletMap, TileLayer, Marker } from 'leaflet'
+import { useI18n } from 'vue-i18n'
 import { useTheme } from '@/composables/useTheme'
 
 const props = defineProps<{ lat: number; lng: number; altitude?: number | null }>()
 
+const { t } = useI18n()
 const { isDark } = useTheme()
 const el = ref<HTMLDivElement | null>(null)
 
@@ -74,11 +76,11 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="overflow-hidden rounded-2xl border border-ink-900/10 dark:border-white/10">
-    <div ref="el" class="h-64 w-full" role="application" aria-label="Map showing where the photo was taken" />
+    <div ref="el" class="h-64 w-full" role="application" :aria-label="t('exifMap.aria')" />
     <div class="flex flex-wrap items-center gap-x-6 gap-y-1 border-t border-ink-900/10 bg-white/60 px-4 py-3 text-xs dark:border-white/10 dark:bg-white/[0.03]">
-      <span><span class="text-muted">Latitude</span> <span class="font-mono font-semibold">{{ lat.toFixed(5) }}</span></span>
-      <span><span class="text-muted">Longitude</span> <span class="font-mono font-semibold">{{ lng.toFixed(5) }}</span></span>
-      <span v-if="altitude != null"><span class="text-muted">Altitude</span> <span class="font-mono font-semibold">{{ Math.round(altitude) }} m</span></span>
+      <span><span class="text-muted">{{ t('exifMap.latitude') }}</span> <span class="font-mono font-semibold">{{ lat.toFixed(5) }}</span></span>
+      <span><span class="text-muted">{{ t('exifMap.longitude') }}</span> <span class="font-mono font-semibold">{{ lng.toFixed(5) }}</span></span>
+      <span v-if="altitude != null"><span class="text-muted">{{ t('exifMap.altitude') }}</span> <span class="font-mono font-semibold">{{ Math.round(altitude) }} m</span></span>
     </div>
   </div>
 </template>

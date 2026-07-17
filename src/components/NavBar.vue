@@ -1,9 +1,13 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 import BrandLogo from '@/components/BrandLogo.vue'
 import ThemeToggle from '@/components/ThemeToggle.vue'
+import LanguagePicker from '@/components/LanguagePicker.vue'
 import AppIcon from '@/components/AppIcon.vue'
 import { NAV_LINKS, GITHUB_URL, APP_STORE_URL } from '@/data/site'
+
+const { t } = useI18n()
 
 const scrolled = ref(false)
 const menuOpen = ref(false)
@@ -33,7 +37,7 @@ function close() {
         :class="scrolled ? 'glass-strong shadow-card' : ''"
         aria-label="Primary"
       >
-        <a href="#top" class="flex items-center" aria-label="Photrail home">
+        <a href="#top" class="flex items-center" :aria-label="t('nav.home')">
           <BrandLogo :size="30" />
         </a>
 
@@ -43,7 +47,7 @@ function close() {
               :href="link.href"
               class="rounded-full px-3.5 py-2 text-sm font-medium text-ink-900/70 transition-colors hover:bg-ink-900/[0.04] hover:text-ink-900 dark:text-white/70 dark:hover:bg-white/5 dark:hover:text-white"
             >
-              {{ link.label }}
+              {{ t(`nav.${link.key}`) }}
             </a>
           </li>
         </ul>
@@ -54,19 +58,20 @@ function close() {
             target="_blank"
             rel="noopener"
             class="hidden h-10 w-10 items-center justify-center rounded-full border border-ink-900/10 bg-white/60 text-ink-900 backdrop-blur transition-colors hover:bg-white dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:bg-white/10 sm:inline-flex"
-            aria-label="View Photrail on GitHub"
+            :aria-label="t('nav.viewGithub')"
           >
             <AppIcon name="github" :size="18" />
           </a>
+          <LanguagePicker />
           <ThemeToggle />
           <a :href="APP_STORE_URL" target="_blank" rel="noopener" class="btn btn-primary hidden sm:inline-flex">
-            Get the app
+            {{ t('nav.getApp') }}
           </a>
           <button
             type="button"
             class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink-900/10 bg-white/60 text-ink-900 lg:hidden dark:border-white/10 dark:bg-white/5 dark:text-white"
             :aria-expanded="menuOpen"
-            aria-label="Toggle menu"
+            :aria-label="t('nav.toggleMenu')"
             @click="menuOpen = !menuOpen"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
@@ -90,7 +95,7 @@ function close() {
             class="block rounded-2xl px-4 py-3 text-sm font-medium text-ink-900/80 transition-colors hover:bg-ink-900/5 dark:text-white/80 dark:hover:bg-white/5"
             @click="close"
           >
-            {{ link.label }}
+            {{ t(`nav.${link.key}`) }}
           </a>
           <a
             :href="APP_STORE_URL"
@@ -99,7 +104,7 @@ function close() {
             class="btn btn-primary mt-1 w-full"
             @click="close"
           >
-            Download on the App Store
+            {{ t('appStore.full') }}
           </a>
         </div>
       </div>

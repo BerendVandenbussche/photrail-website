@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 import PhoneMockup from '@/components/PhoneMockup.vue'
 import AppIcon from '@/components/AppIcon.vue'
 import AppScreen from '@/components/AppScreen.vue'
-import { SCREENS, CAROUSEL_ORDER } from '@/data/screens'
+import { CAROUSEL_ORDER } from '@/data/screens'
 
-const slides = CAROUSEL_ORDER.map((key) => ({ key, ...SCREENS[key] }))
+const { t } = useI18n()
+const slides = CAROUSEL_ORDER.map((key) => ({ key }))
 
 const track = ref<HTMLDivElement | null>(null)
 const active = ref(0)
@@ -48,16 +50,16 @@ onUnmounted(() => track.value?.removeEventListener('scroll', onScroll))
     <div class="container-page">
       <div class="flex flex-col items-end justify-between gap-4 sm:flex-row">
         <div class="max-w-xl">
-          <p v-reveal class="eyebrow">A look inside</p>
+          <p v-reveal class="eyebrow">{{ t('screenshots.eyebrow') }}</p>
           <h2 v-reveal="80" class="display mt-3 text-balance text-3xl sm:text-4xl lg:text-5xl">
-            Designed to make you want to keep traveling.
+            {{ t('screenshots.heading') }}
           </h2>
         </div>
         <div class="hidden gap-2 sm:flex">
-          <button type="button" class="btn btn-ghost h-11 w-11 !p-0" aria-label="Previous screenshot" @click="step(-1)">
+          <button type="button" class="btn btn-ghost h-11 w-11 !p-0" :aria-label="t('screenshots.prev')" @click="step(-1)">
             <AppIcon name="chevron-left" :size="20" />
           </button>
-          <button type="button" class="btn btn-ghost h-11 w-11 !p-0" aria-label="Next screenshot" @click="step(1)">
+          <button type="button" class="btn btn-ghost h-11 w-11 !p-0" :aria-label="t('screenshots.next')" @click="step(1)">
             <AppIcon name="chevron-right" :size="20" />
           </button>
         </div>
@@ -80,8 +82,8 @@ onUnmounted(() => track.value?.removeEventListener('scroll', onScroll))
           </PhoneMockup>
         </div>
         <figcaption class="mt-5 text-center">
-          <p class="font-rounded font-bold">{{ s.title }}</p>
-          <p class="text-sm text-muted">{{ s.desc }}</p>
+          <p class="font-rounded font-bold">{{ t(`screens.${s.key}.title`) }}</p>
+          <p class="text-sm text-muted">{{ t(`screens.${s.key}.desc`) }}</p>
         </figcaption>
       </figure>
     </div>
@@ -94,7 +96,7 @@ onUnmounted(() => track.value?.removeEventListener('scroll', onScroll))
         type="button"
         class="h-2 rounded-full transition-all duration-300"
         :class="active === i ? 'w-6 bg-brand-500' : 'w-2 bg-ink-900/20 dark:bg-white/20'"
-        :aria-label="`Go to ${s.title}`"
+        :aria-label="t('screenshots.goTo', { title: t(`screens.${s.key}.title`) })"
         @click="scrollToIndex(i)"
       />
     </div>

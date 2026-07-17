@@ -2,6 +2,9 @@
 import ScreenChrome from './ScreenChrome.vue'
 import BrandLogo from '@/components/BrandLogo.vue'
 import WorldMapArt from '@/components/WorldMapArt.vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 </script>
 
 <template>
@@ -15,9 +18,9 @@ import WorldMapArt from '@/components/WorldMapArt.vue'
         <div class="relative flex h-full flex-col p-5 text-white">
           <BrandLogo :size="26" />
           <div class="mt-auto">
-            <p class="text-[10px] uppercase tracking-widest text-white/60">My 2025 in travel</p>
+            <p class="text-[10px] uppercase tracking-widest text-white/60">{{ t('mock.share.title') }}</p>
             <p class="font-rounded text-5xl font-black leading-none">32</p>
-            <p class="text-sm font-semibold">countries · 5 continents</p>
+            <p class="text-sm font-semibold">{{ t('mock.share.subtitle') }}</p>
             <div class="mt-3 flex flex-wrap gap-1.5">
               <span class="rounded-full bg-white/15 px-2 py-0.5 text-[9px]">🗼 Eiffel Tower</span>
               <span class="rounded-full bg-white/15 px-2 py-0.5 text-[9px]">🏛️ Colosseum</span>

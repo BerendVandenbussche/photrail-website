@@ -1,25 +1,12 @@
 <script setup lang="ts">
 import AppIcon, { type IconName } from '@/components/AppIcon.vue'
+import { useI18n } from 'vue-i18n'
 
-const steps: Array<{ icon: IconName; step: string; title: string; desc: string }> = [
-  {
-    icon: 'image',
-    step: '01',
-    title: 'Grant photo access',
-    desc: 'Allow Photrail to read your photo library. You can choose all photos or a selection — and revoke it anytime in Settings.',
-  },
-  {
-    icon: 'aperture',
-    step: '02',
-    title: 'Photrail reads the metadata',
-    desc: 'On-device, it scans the GPS coordinates and dates embedded in your photos — never the images themselves leaving your phone — and matches them to countries, cities and landmarks using bundled offline maps.',
-  },
-  {
-    icon: 'compass',
-    step: '03',
-    title: 'Discover your travel story',
-    desc: 'Your map fills in, trips appear, your travel personality emerges and your Year in Travel is ready to relive and share.',
-  },
+const { t } = useI18n()
+const steps: Array<{ icon: IconName; step: string; key: string }> = [
+  { icon: 'image', step: '01', key: 'access' },
+  { icon: 'aperture', step: '02', key: 'read' },
+  { icon: 'compass', step: '03', key: 'discover' },
 ]
 </script>
 
@@ -27,9 +14,9 @@ const steps: Array<{ icon: IconName; step: string; title: string; desc: string }
   <section id="how-it-works" class="section bg-ink-900/[0.02] dark:bg-white/[0.015]">
     <div class="container-page">
       <div class="mx-auto max-w-2xl text-center">
-        <p v-reveal class="eyebrow">How it works</p>
+        <p v-reveal class="eyebrow">{{ t('how.eyebrow') }}</p>
         <h2 v-reveal="80" class="display mt-3 text-balance text-3xl sm:text-4xl lg:text-5xl">
-          From camera roll to travel map in three steps.
+          {{ t('how.heading') }}
         </h2>
       </div>
 
@@ -51,15 +38,14 @@ const steps: Array<{ icon: IconName; step: string; title: string; desc: string }
               {{ i + 1 }}
             </span>
           </div>
-          <p class="font-mono text-xs font-semibold text-brand-500 dark:text-brand-300">STEP {{ s.step }}</p>
-          <h3 class="mt-1 font-rounded text-xl font-bold">{{ s.title }}</h3>
-          <p class="mt-2 max-w-sm text-[15px] leading-relaxed text-muted">{{ s.desc }}</p>
+          <p class="font-mono text-xs font-semibold uppercase text-brand-500 dark:text-brand-300">{{ t('how.stepLabel', { n: s.step }) }}</p>
+          <h3 class="mt-1 font-rounded text-xl font-bold">{{ t(`how.steps.${s.key}.title`) }}</h3>
+          <p class="mt-2 max-w-sm text-[15px] leading-relaxed text-muted">{{ t(`how.steps.${s.key}.desc`) }}</p>
         </li>
       </ol>
 
       <p v-reveal class="mx-auto mt-12 max-w-xl text-center text-sm text-muted">
-        Processing is durable and resumable — close the app whenever, and it picks up right where
-        it left off.
+        {{ t('how.footnote') }}
       </p>
     </div>
   </section>

@@ -1,14 +1,16 @@
 <script setup lang="ts">
 import ScreenChrome from './ScreenChrome.vue'
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const traits = [
-  { label: 'Urban', pct: 82 },
-  { label: 'Coastal', pct: 61 },
-  { label: 'Culture', pct: 47 },
-  { label: 'Nature', pct: 34 },
-  { label: 'Mountain', pct: 22 },
-  { label: 'Adventure', pct: 18 },
+  { key: 'urban', pct: 82 },
+  { key: 'coastal', pct: 61 },
+  { key: 'culture', pct: 47 },
+  { key: 'nature', pct: 34 },
+  { key: 'mountain', pct: 22 },
+  { key: 'adventure', pct: 18 },
 ]
 
 // Build a hexagonal radar polygon from the trait percentages.
@@ -17,9 +19,9 @@ const points = computed(() => {
   const cy = 120
   const r = 92
   return traits
-    .map((t, i) => {
+    .map((trait, i) => {
       const a = (Math.PI * 2 * i) / traits.length - Math.PI / 2
-      const rr = (r * t.pct) / 100
+      const rr = (r * trait.pct) / 100
       return `${cx + rr * Math.cos(a)},${cy + rr * Math.sin(a)}`
     })
     .join(' ')
@@ -37,8 +39,8 @@ const axes = computed(() =>
   <ScreenChrome>
     <div class="flex h-full flex-col gap-4 overflow-hidden px-5 pt-4">
       <header>
-        <p class="text-[10px] font-medium text-white/50">Travel Personality</p>
-        <h1 class="font-rounded text-2xl font-extrabold">Urban Explorer</h1>
+        <p class="text-[10px] font-medium text-white/50">{{ t('mock.travelPersonality') }}</p>
+        <h1 class="font-rounded text-2xl font-extrabold">{{ t('mock.urbanExplorer') }}</h1>
       </header>
 
       <div class="flex items-center justify-center">
@@ -52,12 +54,12 @@ const axes = computed(() =>
       </div>
 
       <div class="space-y-2 overflow-hidden">
-        <div v-for="t in traits.slice(0, 4)" :key="t.label" class="flex items-center gap-3">
-          <span class="w-16 text-[11px] text-white/70">{{ t.label }}</span>
+        <div v-for="trait in traits.slice(0, 4)" :key="trait.key" class="flex items-center gap-3">
+          <span class="w-16 text-[11px] text-white/70">{{ t(`mock.traits.${trait.key}`) }}</span>
           <div class="h-1.5 flex-1 overflow-hidden rounded-full bg-white/10">
-            <div class="h-full rounded-full bg-gradient-to-r from-brand-500 to-violet2-500" :style="{ width: `${t.pct}%` }" />
+            <div class="h-full rounded-full bg-gradient-to-r from-brand-500 to-violet2-500" :style="{ width: `${trait.pct}%` }" />
           </div>
-          <span class="w-8 text-right text-[10px] text-white/40">{{ t.pct }}%</span>
+          <span class="w-8 text-right text-[10px] text-white/40">{{ trait.pct }}%</span>
         </div>
       </div>
     </div>

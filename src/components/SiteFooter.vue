@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import BrandLogo from '@/components/BrandLogo.vue'
 import AppIcon from '@/components/AppIcon.vue'
+import { useI18n } from 'vue-i18n'
 import { GITHUB_URL, APP_STORE_URL, NAV_LINKS } from '@/data/site'
 
+const { t } = useI18n()
 const year = new Date().getFullYear()
 </script>
 
@@ -14,35 +16,35 @@ const year = new Date().getFullYear()
         <div>
           <BrandLogo :size="32" />
           <p class="mt-4 max-w-xs text-sm text-muted">
-            Your travel history, automatically. Built privacy-first and entirely on-device.
+            {{ t('footer.tagline') }}
           </p>
           <div class="mt-5 flex gap-2">
-            <a :href="APP_STORE_URL" target="_blank" rel="noopener" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink-900/10 text-ink-900 transition-colors hover:bg-ink-900/5 dark:border-white/10 dark:text-white dark:hover:bg-white/5" aria-label="App Store">
+            <a :href="APP_STORE_URL" target="_blank" rel="noopener" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink-900/10 text-ink-900 transition-colors hover:bg-ink-900/5 dark:border-white/10 dark:text-white dark:hover:bg-white/5" :aria-label="t('footer.appStoreAria')">
               <AppIcon name="apple" :size="18" />
             </a>
-            <a :href="GITHUB_URL" target="_blank" rel="noopener" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink-900/10 text-ink-900 transition-colors hover:bg-ink-900/5 dark:border-white/10 dark:text-white dark:hover:bg-white/5" aria-label="GitHub">
+            <a :href="GITHUB_URL" target="_blank" rel="noopener" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink-900/10 text-ink-900 transition-colors hover:bg-ink-900/5 dark:border-white/10 dark:text-white dark:hover:bg-white/5" :aria-label="t('footer.githubAria')">
               <AppIcon name="github" :size="18" />
             </a>
           </div>
         </div>
 
         <!-- Explore -->
-        <nav aria-label="Footer">
-          <h3 class="text-xs font-semibold uppercase tracking-wider text-muted">Explore</h3>
+        <nav :aria-label="t('footer.explore')">
+          <h3 class="text-xs font-semibold uppercase tracking-wider text-muted">{{ t('footer.explore') }}</h3>
           <ul class="mt-4 space-y-2.5">
             <li v-for="l in NAV_LINKS" :key="l.href">
-              <a :href="l.href" class="text-sm text-ink-900/70 transition-colors hover:text-ink-900 dark:text-white/70 dark:hover:text-white">{{ l.label }}</a>
+              <a :href="l.href" class="text-sm text-ink-900/70 transition-colors hover:text-ink-900 dark:text-white/70 dark:hover:text-white">{{ t(`nav.${l.key}`) }}</a>
             </li>
           </ul>
         </nav>
 
         <!-- Get it -->
         <div>
-          <h3 class="text-xs font-semibold uppercase tracking-wider text-muted">Get Photrail</h3>
+          <h3 class="text-xs font-semibold uppercase tracking-wider text-muted">{{ t('footer.getPhotrail') }}</h3>
           <ul class="mt-4 space-y-2.5">
-            <li><a :href="APP_STORE_URL" target="_blank" rel="noopener" class="text-sm text-ink-900/70 transition-colors hover:text-ink-900 dark:text-white/70 dark:hover:text-white">Download on the App Store</a></li>
-            <li><a :href="GITHUB_URL" target="_blank" rel="noopener" class="text-sm text-ink-900/70 transition-colors hover:text-ink-900 dark:text-white/70 dark:hover:text-white">Source on GitHub</a></li>
-            <li><a :href="`${GITHUB_URL}/blob/main/LICENSE`" target="_blank" rel="noopener" class="text-sm text-ink-900/70 transition-colors hover:text-ink-900 dark:text-white/70 dark:hover:text-white">GPLv3 License</a></li>
+            <li><a :href="APP_STORE_URL" target="_blank" rel="noopener" class="text-sm text-ink-900/70 transition-colors hover:text-ink-900 dark:text-white/70 dark:hover:text-white">{{ t('footer.downloadLink') }}</a></li>
+            <li><a :href="GITHUB_URL" target="_blank" rel="noopener" class="text-sm text-ink-900/70 transition-colors hover:text-ink-900 dark:text-white/70 dark:hover:text-white">{{ t('footer.sourceLink') }}</a></li>
+            <li><a :href="`${GITHUB_URL}/blob/main/LICENSE`" target="_blank" rel="noopener" class="text-sm text-ink-900/70 transition-colors hover:text-ink-900 dark:text-white/70 dark:hover:text-white">{{ t('footer.licenseLink') }}</a></li>
           </ul>
         </div>
       </div>
@@ -52,18 +54,15 @@ const year = new Date().getFullYear()
         <p class="flex items-start gap-2.5 text-sm text-muted">
           <AppIcon name="shield" :size="18" class="mt-0.5 shrink-0 text-brand-500 dark:text-brand-300" />
           <span>
-            <strong class="text-ink-900 dark:text-white">Privacy statement:</strong>
-            Photrail processes your photos entirely on your device. It never uploads your images,
-            requires no account, and includes no advertising or privacy-compromising analytics.
-            The only network use is optionally resolving city names from coordinates via Apple's
-            geocoder. The full source code is available for inspection on GitHub.
+            <strong class="text-ink-900 dark:text-white">{{ t('footer.privacyTitle') }}</strong>
+            {{ t('footer.privacyBody') }}
           </span>
         </p>
       </div>
 
       <div class="mt-8 flex flex-col items-center justify-between gap-3 border-t border-ink-900/10 pt-6 text-center text-xs text-muted dark:border-white/10 sm:flex-row sm:text-left">
-        <p>© {{ year }} Photrail. All rights reserved.</p>
-        <p>Open source under the GPLv3 License · Made for travelers, not advertisers.</p>
+        <p>{{ t('footer.copyright', { year }) }}</p>
+        <p>{{ t('footer.madeFor') }}</p>
       </div>
     </div>
   </footer>
