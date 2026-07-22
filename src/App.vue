@@ -8,6 +8,7 @@ import HowItWorks from '@/components/HowItWorks.vue'
 import PrivacySection from '@/components/PrivacySection.vue'
 import ExifEducation from '@/components/ExifEducation.vue'
 import ExifDemo from '@/components/ExifDemo.vue'
+import HealthInsightsSection from '@/components/HealthInsightsSection.vue'
 import YearInTravelSection from '@/components/YearInTravelSection.vue'
 import ScreenshotCarousel from '@/components/ScreenshotCarousel.vue'
 import OpenSourceSection from '@/components/OpenSourceSection.vue'
@@ -55,6 +56,7 @@ watch(locale, syncDocument)
     <ExifDemo />
 
     <YearInTravelSection />
+    <HealthInsightsSection />
     <ScreenshotCarousel />
     <OpenSourceSection />
     <ContributeSection />

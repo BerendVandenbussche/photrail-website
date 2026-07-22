@@ -130,6 +130,16 @@ export default {
         blurb:
           'A travel-stats widget and a world-wonders widget keep your journey one glance away — small, medium and lock-screen sizes.',
       },
+      health: {
+        title: 'Trip Insights with Apple Health',
+        blurb:
+          'Opt in to see the heart rate, climbs, calories and workouts behind each trip — matched to your photos, read-only, and never leaving your device.',
+      },
+      onThisDay: {
+        title: 'On This Day',
+        blurb:
+          'Photrail resurfaces the photos you took on today’s date in years past — a little hit of travel nostalgia every time you open it.',
+      },
     },
   },
 
@@ -257,6 +267,38 @@ export default {
     aria: 'Map showing where the photo was taken',
   },
 
+  health: {
+    eyebrow: 'Powered by Apple Health',
+    heading: 'Relive your trips — heartbeat and all.',
+    intro:
+      'Turn on Trip Insights and Photrail adds a whole new layer to every journey: the effort, the excitement and the movement behind your photos — drawn from Apple Health, entirely on your device.',
+    insights: {
+      excitement: {
+        title: 'Excitement Meter',
+        desc: 'Your heart rate is matched to the moment each photo was taken — spot the calmest sunset and the most thrilling summit at a glance.',
+      },
+      vertical: {
+        title: 'Vertical Exploration',
+        desc: 'Every stair and hillside you climbed, turned into something you can picture — “that’s 1.4× the Eiffel Tower.”',
+      },
+      fuel: {
+        title: 'Travel Fuel',
+        desc: 'The energy you burned exploring, served back as something tasty — roughly a stack of croissants’ worth.',
+      },
+      persona: {
+        title: 'Travel Persona',
+        desc: 'A playful profile of how you moved on the trip, from gentle stroller to relentless explorer.',
+      },
+      workouts: {
+        title: 'Workout Chapters',
+        desc: 'Runs, rides and hikes become chapters of the trip — each with its route and the photos you took along the way.',
+      },
+    },
+    privacyTitle: 'Read-only. On-device. Opt-in.',
+    privacyBody:
+      'Trip Insights is entirely optional. Photrail only reads your activity from Apple Health — it never writes anything back — and your health data is processed on your iPhone and never uploaded. Turn it off anytime in the Health app.',
+  },
+
   year: {
     eyebrow: 'Year in Travel',
     heading: 'Your year, replayed like a highlight reel.',
@@ -297,6 +339,7 @@ export default {
     map: { title: 'Travel Map', desc: 'Every country, lit up' },
     country: { title: 'Country detail', desc: 'Trips, cities & photos' },
     share: { title: 'Share cards', desc: 'Ready for your story' },
+    insights: { title: 'Trip Insights', desc: 'Your trip, via Apple Health' },
   },
 
   openSource: {
@@ -426,6 +469,14 @@ export default {
     share: {
       title: 'My 2025 in travel',
       subtitle: 'countries · 5 continents',
+    },
+    insights: {
+      title: 'Trip Insights',
+      poweredBy: 'Apple Health',
+      excitement: { title: 'Excitement Meter', value: 'Heart rate matched to 128 photos', sub: '🤩 Peak 142 bpm' },
+      vertical: { title: 'Vertical Exploration', value: '312 flights climbed', sub: '🗼 That’s 1.4× the Eiffel Tower' },
+      fuel: { title: 'Travel Fuel', value: 'You burned 8,240 kcal', sub: '🥐 ≈ 38 croissants' },
+      workouts: { title: 'Workout Chapters', value: '3 workouts on this trip' },
     },
   },
 

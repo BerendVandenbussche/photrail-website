@@ -130,6 +130,16 @@ export default {
         blurb:
           'Een reisstatistieken-widget en een wereldwonderen-widget houden je reis binnen handbereik — klein, middel en op het toegangsscherm.',
       },
+      health: {
+        title: 'Reisinzichten met Apple Health',
+        blurb:
+          'Kies ervoor om de hartslag, beklimmingen, calorieën en workouts achter elke reis te zien — gekoppeld aan je foto’s, alleen-lezen en nooit van je toestel af.',
+      },
+      onThisDay: {
+        title: 'Op deze dag',
+        blurb:
+          'Photrail haalt de foto’s naar boven die je op deze dag in vorige jaren nam — telkens een vleugje reisnostalgie wanneer je de app opent.',
+      },
     },
   },
 
@@ -257,6 +267,38 @@ export default {
     aria: 'Kaart met de plek waar de foto is genomen',
   },
 
+  health: {
+    eyebrow: 'Mogelijk gemaakt door Apple Health',
+    heading: 'Herbeleef je reizen — inclusief je hartslag.',
+    intro:
+      'Zet Reisinzichten aan en Photrail voegt een hele nieuwe laag toe aan elke reis: de inspanning, de spanning en de beweging achter je foto’s — uit Apple Health, volledig op je toestel.',
+    insights: {
+      excitement: {
+        title: 'Spanningsmeter',
+        desc: 'Je hartslag wordt gekoppeld aan het moment waarop elke foto is genomen — herken in één oogopslag de rustigste zonsondergang en de meest spannende top.',
+      },
+      vertical: {
+        title: 'Verticale verkenning',
+        desc: 'Elke trap en helling die je beklom, omgezet in iets wat je je kunt voorstellen — “dat is 1,4× de Eiffeltoren.”',
+      },
+      fuel: {
+        title: 'Reisbrandstof',
+        desc: 'De energie die je verbrandde tijdens het verkennen, teruggegeven als iets lekkers — ongeveer een stapel croissants.',
+      },
+      persona: {
+        title: 'Reispersona',
+        desc: 'Een speels profiel van hoe je je op de reis verplaatste, van rustige wandelaar tot onvermoeibare ontdekker.',
+      },
+      workouts: {
+        title: 'Workout-hoofdstukken',
+        desc: 'Looprondjes, ritten en wandelingen worden hoofdstukken van de reis — elk met zijn route en de foto’s die je onderweg nam.',
+      },
+    },
+    privacyTitle: 'Alleen-lezen. Op je toestel. Optioneel.',
+    privacyBody:
+      'Reisinzichten is volledig optioneel. Photrail leest alleen je activiteit uit Apple Health — het schrijft nooit iets terug — en je gezondheidsgegevens worden op je iPhone verwerkt en nooit geüpload. Zet het op elk moment uit in de Health-app.',
+  },
+
   year: {
     eyebrow: 'Jaar in Reizen',
     heading: 'Je jaar, opnieuw afgespeeld als een highlightreel.',
@@ -297,6 +339,7 @@ export default {
     map: { title: 'Reiskaart', desc: 'Elk land opgelicht' },
     country: { title: 'Landdetail', desc: 'Reizen, steden & foto’s' },
     share: { title: 'Deelkaarten', desc: 'Klaar voor je story' },
+    insights: { title: 'Reisinzichten', desc: 'Je reis via Apple Health' },
   },
 
   openSource: {
@@ -425,6 +468,14 @@ export default {
     share: {
       title: 'Mijn 2025 in reizen',
       subtitle: 'landen · 5 continenten',
+    },
+    insights: {
+      title: 'Reisinzichten',
+      poweredBy: 'Apple Health',
+      excitement: { title: 'Spanningsmeter', value: 'Hartslag gekoppeld aan 128 foto’s', sub: '🤩 Piek 142 bpm' },
+      vertical: { title: 'Verticale verkenning', value: '312 trappen beklommen', sub: '🗼 Dat is 1,4× de Eiffeltoren' },
+      fuel: { title: 'Reisbrandstof', value: 'Je verbrandde 8.240 kcal', sub: '🥐 ≈ 38 croissants' },
+      workouts: { title: 'Workout-hoofdstukken', value: '3 workouts op deze reis' },
     },
   },
 

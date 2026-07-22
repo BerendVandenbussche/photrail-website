@@ -36,6 +36,9 @@ export type IconName =
   | 'translate'
   | 'bug'
   | 'code'
+  | 'heart'
+  | 'flame'
+  | 'activity'
 
 // `fill` icons (brand glyphs) vs default stroke icons.
 export const FILLED: IconName[] = ['github', 'apple', 'star']
@@ -93,6 +96,11 @@ export const PATHS: Record<IconName, string> = {
   bug:
     'M9 6a3 3 0 0 1 6 0M6 12h12M12 9v11M6 12v2a6 6 0 0 0 12 0v-2M5 8.5l2.2 1.6M19 8.5l-2.2 1.6M4.3 17.4l2.5-1.4M19.7 17.4l-2.5-1.4M4 12.5h2M18 12.5h2',
   code: 'M8 7l-5 5 5 5M16 7l5 5-5 5M13.5 4l-3 16',
+  heart:
+    'M12 20.5C6.5 16.5 3.5 13 3.5 9.3A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 8.5 2.3c0 3.7-3 7.2-8.5 11.2z',
+  flame:
+    'M12 2.5c.9 2.8 3.6 4.2 3.6 8.1a3.6 3.6 0 0 1-7.2 0c0-1.4.7-2.6.9-2.8.3.9.9 1.3 1.4 1.3.8 0 1-1.1.8-2.2C11.2 4.4 12 3.3 12 2.5z',
+  activity: 'M3 12h4l3 8 4-16 3 8h4',
 }
 </script>
 

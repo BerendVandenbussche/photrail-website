@@ -10,6 +10,7 @@ its image automatically, and any screen without a file keeps using the mockup.
 | ------------------ | --------------------------------- |
 | `dashboard.png`    | Hero (main phone), download CTA   |
 | `recap.png`        | Hero (back phone), Year in Travel |
+| `insights.png`     | Trip Insights (Apple Health) section, carousel |
 | `personality.png`  | Download CTA, carousel            |
 | `map.png`          | Download CTA, carousel            |
 | `country.png`      | Carousel                          |

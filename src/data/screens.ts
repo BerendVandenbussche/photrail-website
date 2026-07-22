@@ -5,6 +5,7 @@ import RecapScreen from '@/components/screens/RecapScreen.vue'
 import MapScreen from '@/components/screens/MapScreen.vue'
 import CountryScreen from '@/components/screens/CountryScreen.vue'
 import ShareCardScreen from '@/components/screens/ShareCardScreen.vue'
+import TripInsightsScreen from '@/components/screens/TripInsightsScreen.vue'
 
 /**
  * The phone screens shown across the site.
@@ -32,13 +33,21 @@ export interface ScreenEntry {
   fallback: Component
 }
 
-export type ScreenKey = 'dashboard' | 'personality' | 'recap' | 'map' | 'country' | 'share'
+export type ScreenKey =
+  | 'dashboard'
+  | 'personality'
+  | 'recap'
+  | 'insights'
+  | 'map'
+  | 'country'
+  | 'share'
 
 // Titles/descriptions live in i18n under `screens.<key>.title` / `.desc`.
 export const SCREENS: Record<ScreenKey, ScreenEntry> = {
   dashboard: { image: '/screenshots/dashboard.png', fallback: DashboardScreen },
   personality: { image: '/screenshots/personality.png', fallback: PersonalityScreen },
   recap: { image: '/screenshots/recap.png', fallback: RecapScreen },
+  insights: { image: '/screenshots/insights.png', fallback: TripInsightsScreen },
   map: { image: '/screenshots/map.png', fallback: MapScreen },
   country: { image: '/screenshots/country.png', fallback: CountryScreen },
   share: { image: '/screenshots/share.png', fallback: ShareCardScreen },
@@ -49,6 +58,7 @@ export const CAROUSEL_ORDER: ScreenKey[] = [
   'dashboard',
   'personality',
   'recap',
+  'insights',
   'map',
   'country',
   'share',
