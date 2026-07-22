@@ -10,7 +10,7 @@ export const GITHUB_CONTRIBUTE = `${GITHUB_URL}/contribute`
 export const GITHUB_STRINGS = `${GITHUB_URL}/blob/main/Photrail/Localizable.xcstrings`
 
 // Placeholder App Store URL — swap for the real product page on launch.
-export const APP_STORE_URL = 'https://apps.apple.com/app/photrail/id000000000'
+export const APP_STORE_URL = 'https://apps.apple.com/us/app/photrail/id6786646007?ppid=6ed1df25-051c-4eae-a205-17fc09ab44b2'
 
 // Nav items: `key` maps to an i18n string under `nav.*`; label is resolved in
 // the component so it stays in sync with the active language.
