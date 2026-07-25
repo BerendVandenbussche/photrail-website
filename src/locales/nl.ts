@@ -177,7 +177,7 @@ export default {
       tracking: 'Geen tracking, geen advertenties, geen privacyschendende analyse',
       openSource: 'Open source — iedereen kan precies zien wat het doet',
     },
-    note: 'De enige uitzondering, eerlijk gezegd: het opzoeken van stadsnamen gebruikt de geocoder van Apple, die enkel coördinaten verstuurt (nooit foto’s) en alleen voor de optionele verrijking met stadsnamen.',
+    note: 'Geen sterretjes: ook stadsnamen worden op je toestel opgezocht, uit een ingebouwde plaatsendataset — dus Photrail heeft helemaal geen netwerk nodig om je reisgeschiedenis op te bouwen. Het werkt volledig offline, vliegtuigmodus inbegrepen.',
     photrailTitle: 'Photrail',
     othersTitle: 'Typische cloud-apps',
     photrail: {
@@ -412,7 +412,7 @@ export default {
     licenseLink: 'GPLv3-licentie',
     privacyTitle: 'Privacyverklaring:',
     privacyBody:
-      ' Photrail verwerkt je foto’s volledig op je toestel. Het uploadt je afbeeldingen nooit, vereist geen account en bevat geen advertenties of privacyschendende analyse. Het enige netwerkgebruik is het optioneel opzoeken van stadsnamen op basis van coördinaten via de geocoder van Apple. De volledige broncode is ter inzage beschikbaar op GitHub.',
+      ' Photrail verwerkt je foto’s volledig op je toestel. Het uploadt je afbeeldingen nooit, vereist geen account en bevat geen advertenties of privacyschendende analyse. Alles — ook stadsnamen — wordt op je toestel opgezocht, dus het werkt volledig offline, zonder enig netwerk. De volledige broncode is ter inzage beschikbaar op GitHub.',
     copyright: '© {year} Photrail. Alle rechten voorbehouden.',
     madeFor: 'Open source onder de GPLv3-licentie · Gemaakt voor reizigers, niet voor adverteerders.',
     appStoreAria: 'App Store',

@@ -177,7 +177,7 @@ export default {
       tracking: 'No tracking, no advertising, no privacy-compromising analytics',
       openSource: 'Open source — anyone can inspect exactly what it does',
     },
-    note: 'The one exception, stated plainly: resolving city names uses Apple’s geocoder, which sends only coordinates (never images) and only for the optional city-enrichment pass.',
+    note: 'No asterisks, either: city names are resolved on-device too, from a bundled place dataset — so Photrail needs no network at all to build your travel history. It works entirely offline, airplane mode included.',
     photrailTitle: 'Photrail',
     othersTitle: 'Typical cloud apps',
     photrail: {
@@ -412,7 +412,7 @@ export default {
     licenseLink: 'GPLv3 License',
     privacyTitle: 'Privacy statement:',
     privacyBody:
-      ' Photrail processes your photos entirely on your device. It never uploads your images, requires no account, and includes no advertising or privacy-compromising analytics. The only network use is optionally resolving city names from coordinates via Apple’s geocoder. The full source code is available for inspection on GitHub.',
+      ' Photrail processes your photos entirely on your device. It never uploads your images, requires no account, and includes no advertising or privacy-compromising analytics. Everything — including city names — is resolved on-device, so it works fully offline with no network at all. The full source code is available for inspection on GitHub.',
     copyright: '© {year} Photrail. All rights reserved.',
     madeFor: 'Open source under the GPLv3 License · Made for travelers, not advertisers.',
     appStoreAria: 'App Store',
