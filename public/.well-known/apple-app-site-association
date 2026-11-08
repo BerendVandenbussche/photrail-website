@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["6N377BRGHL.Berend.Photrail"],
+        "components": [
+          { "/": "/compare*", "comment": "Compare links: the countries travel in the #fragment" }
+        ]
+      }
+    ]
+  }
+}

@@ -98,7 +98,12 @@ export default {
       recap: {
         title: 'Jaar in Reizen',
         blurb:
-          'Een filmische terugblik op je jaar in Wrapped-stijl — afstand, topbestemmingen, allereerste landen en een indrukwekkende finale. Elke slide is deelbaar.',
+          'Een terugblik op je jaar in Wrapped-stijl die speelt als een story — tik door afstand, topbestemmingen en allereerste landen, met een film van je jaar als finale. Elke slide is deelbaar.',
+      },
+      films: {
+        title: 'Reisfilms',
+        blurb:
+          'Maak van elke reis een korte verticale video — kaarten, foto’s en statistieken, klaar voor Instagram, TikTok of WhatsApp. Gemaakt op je iPhone, en je eerste film is gratis.',
       },
       map: {
         title: 'Wereldkaart',
@@ -128,7 +133,7 @@ export default {
       widgets: {
         title: 'Widgets voor je beginscherm',
         blurb:
-          'Een reisstatistieken-widget en een wereldwonderen-widget houden je reis binnen handbereik — klein, middel en op het toegangsscherm.',
+          'Reisstatistieken, wereldwonderen en een aftelling naar je volgende reis houden je reis binnen handbereik — klein, middel en op het toegangsscherm.',
       },
       health: {
         title: 'Reisinzichten met Apple Health',
@@ -139,6 +144,16 @@ export default {
         title: 'Op deze dag',
         blurb:
           'Photrail haalt de foto’s naar boven die je op deze dag in vorige jaren nam — telkens een vleugje reisnostalgie wanneer je de app opent.',
+      },
+      compare: {
+        title: 'Vergelijk met vrienden',
+        blurb:
+          'Toon een QR-code en een vriend ziet meteen waar jullie allebei geweest zijn — geen account, geen server, je landen zitten in de link zelf. Of zet Game Center aan voor prestaties en klassementen.',
+      },
+      plan: {
+        title: 'Plan je volgende reis',
+        blurb:
+          'Voeg de landen, data en vluchten van een komende reis toe en krijg een aftelling, herinneringen en een reispagina die klaarstaat zodra je landt.',
       },
     },
   },
@@ -177,7 +192,7 @@ export default {
       tracking: 'Geen tracking, geen advertenties, geen privacyschendende analyse',
       openSource: 'Open source — iedereen kan precies zien wat het doet',
     },
-    note: 'Geen sterretjes: ook stadsnamen worden op je toestel opgezocht, uit een ingebouwde plaatsendataset — dus Photrail heeft helemaal geen netwerk nodig om je reisgeschiedenis op te bouwen. Het werkt volledig offline, vliegtuigmodus inbegrepen.',
+    note: 'Geen sterretjes: ook stadsnamen worden op je toestel opgezocht, uit een ingebouwde plaatsendataset — dus Photrail heeft helemaal geen netwerk nodig om je reisgeschiedenis op te bouwen. Het werkt volledig offline, vliegtuigmodus inbegrepen. De extra’s blijven optioneel: vergelijklinks dragen je landen in de link zelf, en Game Center krijgt je aantallen enkel als je het aanzet.',
     photrailTitle: 'Photrail',
     othersTitle: 'Typische cloud-apps',
     photrail: {
@@ -307,7 +322,7 @@ export default {
     highlights: {
       story: {
         title: 'Je jaar als verhaal',
-        desc: 'Een terugblik in Wrapped-stijl die je doorheen swipet — afgelegde afstand met herkenbare vergelijkingen, je route chronologisch op de kaart en een indrukwekkende finale.',
+        desc: 'Een terugblik in Wrapped-stijl waar je doorheen tikt als een story — afgelegde afstand met herkenbare vergelijkingen, je route chronologisch op de kaart en een film van je jaar als afsluiter.',
       },
       firsts: {
         title: 'Grootste reizen & primeurs',
@@ -319,7 +334,7 @@ export default {
       },
       shareable: {
         title: 'Elke slide is deelbaar',
-        desc: 'Exporteer elke slide als een eigen gebrande kaart; de finale komt zelfs in lichte, donkere en transparante thema’s.',
+        desc: 'Deel elke slide als een eigen gebrande kaart, of deel de finale als video van je hele jaar.',
       },
     },
   },

@@ -98,7 +98,12 @@ export default {
       recap: {
         title: 'Year in Travel',
         blurb:
-          'A cinematic, Wrapped-style recap of your year — distance, top destinations, first-ever countries and a hero finale. Every slide is shareable.',
+          'A Wrapped-style recap of your year that plays like a story — tap through distance, top destinations and first-ever countries, ending with a film of your year. Every slide is shareable.',
+      },
+      films: {
+        title: 'Trip films',
+        blurb:
+          'Turn any trip into a short vertical video — maps, photos and stats, ready for Instagram, TikTok or WhatsApp. Rendered on your iPhone, and your first film is free.',
       },
       map: {
         title: 'World map',
@@ -128,7 +133,7 @@ export default {
       widgets: {
         title: 'Home-screen widgets',
         blurb:
-          'A travel-stats widget and a world-wonders widget keep your journey one glance away — small, medium and lock-screen sizes.',
+          'Travel stats, world wonders and a countdown to your next trip keep your journey one glance away — small, medium and lock-screen sizes.',
       },
       health: {
         title: 'Trip Insights with Apple Health',
@@ -139,6 +144,16 @@ export default {
         title: 'On This Day',
         blurb:
           'Photrail resurfaces the photos you took on today’s date in years past — a little hit of travel nostalgia every time you open it.',
+      },
+      compare: {
+        title: 'Compare with friends',
+        blurb:
+          'Show a QR code and a friend instantly sees where you have both been — no account, no server, your countries travel inside the link. Or switch on Game Center for achievements and leaderboards.',
+      },
+      plan: {
+        title: 'Plan your next trip',
+        blurb:
+          'Add the countries, dates and flights of an upcoming trip and get a countdown, reminders and a trip page that is ready the moment you land.',
       },
     },
   },
@@ -177,7 +192,7 @@ export default {
       tracking: 'No tracking, no advertising, no privacy-compromising analytics',
       openSource: 'Open source — anyone can inspect exactly what it does',
     },
-    note: 'No asterisks, either: city names are resolved on-device too, from a bundled place dataset — so Photrail needs no network at all to build your travel history. It works entirely offline, airplane mode included.',
+    note: 'No asterisks, either: city names are resolved on-device too, from a bundled place dataset — so Photrail needs no network at all to build your travel history. It works entirely offline, airplane mode included. The extras stay optional: compare links carry your countries inside the link itself, and Game Center only receives your counts if you switch it on.',
     photrailTitle: 'Photrail',
     othersTitle: 'Typical cloud apps',
     photrail: {
@@ -307,7 +322,7 @@ export default {
     highlights: {
       story: {
         title: 'Your year as a story',
-        desc: 'A paged, Wrapped-style recap you swipe through — distance traveled with relatable comparisons, your route mapped chronologically, and a hero finale.',
+        desc: 'A Wrapped-style recap you tap through like a story — distance traveled with relatable comparisons, your route mapped chronologically, and a film of your year to finish.',
       },
       firsts: {
         title: 'Biggest trips & firsts',
@@ -319,7 +334,7 @@ export default {
       },
       shareable: {
         title: 'Every slide is shareable',
-        desc: 'Export any slide as its own branded card; the finale even comes in light, dark and transparent themes.',
+        desc: 'Share any slide as its own branded card, or share the finale as a video of your whole year.',
       },
     },
   },
