@@ -38,7 +38,12 @@
         display: block; margin: 32px 0 14px; padding: 16px; border-radius: 16px;
         background: #fff; color: #0b0e1f; font-weight: 700; font-size: 17px; text-decoration: none;
       }
-      .hint { font-size: 14px; }
+      .open {
+        display: block; margin: 0 0 14px; padding: 15px; border-radius: 16px;
+        border: 1.5px solid rgba(255,255,255,.35); color: #fff; font-weight: 700; font-size: 17px;
+        text-decoration: none;
+      }
+      .hint { font-size: 14px; margin-bottom: 10px; }
       .privacy { margin-top: 28px; font-size: 12px; opacity: .55; }
       .home { display: inline-block; margin-top: 18px; color: #a3a6ff; font-size: 14px; text-decoration: none; }
     </style>
@@ -57,7 +62,10 @@
          href="https://apps.apple.com/us/app/photrail/id6786646007?ppid=6ed1df25-051c-4eae-a205-17fc09ab44b2">
         Get Photrail on the App Store
       </a>
-      <p class="hint" id="hint">Already have Photrail? Open this link on your iPhone, or scan the code with your camera.</p>
+      <p class="hint" id="hint">Already have Photrail?</p>
+      <!-- photrail://compare/#… opens the app even when iOS keeps the https link in Safari.
+           The fragment is added by the script below. -->
+      <a class="open" id="open" href="photrail://compare/">Open in Photrail</a>
       <p class="privacy" id="privacy">The countries are in the link itself and never reach our server. Photrail runs 100% on your device.</p>
       <a class="home" id="home" href="/">What is Photrail?</a>
     </main>
@@ -72,7 +80,8 @@
           subtitle: 'Bekijk in welke landen jullie allebei geweest zijn.',
           one: 'land bezocht', many: 'landen bezocht',
           store: 'Download Photrail in de App Store',
-          hint: 'Heb je Photrail al? Open deze link op je iPhone, of scan de code met je camera.',
+          hint: 'Heb je Photrail al?',
+          open: 'Open in Photrail',
           privacy: 'De landen zitten in de link zelf en komen nooit op onze server. Photrail werkt 100% op je toestel.',
           home: 'Wat is Photrail?', page: 'Vergelijk je reizen — Photrail'
         } : {
@@ -81,7 +90,8 @@
           subtitle: "See which countries you've both been to.",
           one: 'country visited', many: 'countries visited',
           store: 'Get Photrail on the App Store',
-          hint: 'Already have Photrail? Open this link on your iPhone, or scan the code with your camera.',
+          hint: 'Already have Photrail?',
+          open: 'Open in Photrail',
           privacy: 'The countries are in the link itself and never reach our server. Photrail runs 100% on your device.',
           home: 'What is Photrail?', page: 'Compare your travels — Photrail'
         };
@@ -113,6 +123,9 @@
         }
         set('store', t.store);
         set('hint', t.hint);
+        set('open', t.open);
+        // Hand the app the same fragment this page got: the countries never leave the device.
+        document.getElementById('open').href = 'photrail://compare/' + location.hash;
         set('privacy', t.privacy);
         set('home', t.home);
       })();
