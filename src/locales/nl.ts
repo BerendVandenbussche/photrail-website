@@ -100,6 +100,11 @@ export default {
         blurb:
           'Een terugblik op je jaar in Wrapped-stijl die speelt als een story — tik door afstand, topbestemmingen en allereerste landen, met een film van je jaar als finale. Elke slide is deelbaar.',
       },
+      postcard: {
+        title: 'Dagelijkse postkaarten',
+        blurb:
+          'Maak van elke reisdag een postkaart — je beste foto’s, een postzegel, een poststempel en de route die je aflegde. Op reisdagen met foto’s herinnert Photrail je er ’s avonds aan, klaar om te delen.',
+      },
       films: {
         title: 'Reisfilms',
         blurb:

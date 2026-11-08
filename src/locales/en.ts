@@ -100,6 +100,11 @@ export default {
         blurb:
           'A Wrapped-style recap of your year that plays like a story — tap through distance, top destinations and first-ever countries, ending with a film of your year. Every slide is shareable.',
       },
+      postcard: {
+        title: 'Daily postcards',
+        blurb:
+          'Turn any day of a trip into a postcard — your best photos, a stamp, a postmark and the route you took. On travel days with photos, Photrail reminds you in the evening, ready to share.',
+      },
       films: {
         title: 'Trip films',
         blurb:
